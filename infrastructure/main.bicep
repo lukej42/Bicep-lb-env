@@ -2,9 +2,6 @@ param location string = resourceGroup().location
 param environment string
 param appName string
 
-// --------------------
-// Networking
-// --------------------
 resource vnet 'Microsoft.Network/virtualNetworks@2023-05-01' = {
   name: 'sharedVNet'
   location: location
@@ -45,9 +42,6 @@ resource nsg 'Microsoft.Network/networkSecurityGroups@2023-05-01' = {
   }
 }
 
-// --------------------
-// Core Azure Services
-// --------------------
 module storage './modules/storage.bicep' = {
   name: 'storageDeploy'
   params: {
@@ -63,9 +57,6 @@ module keyvault './modules/keyvault.bicep' = {
     location: location
   }
 }
-// --------------------
-// Load Balancer
-// --------------------
 resource publicIpLb 'Microsoft.Network/publicIPAddresses@2023-05-01' = {
   name: 'lb-public-ip'
   location: location
