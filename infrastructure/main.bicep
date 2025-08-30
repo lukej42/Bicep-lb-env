@@ -2,7 +2,7 @@ param location string = resourceGroup().location
 param environment string
 param appName string
 
-resource vnet 'Microsoft.Network/virtualNetworks@2023-05-01' = {
+resource vnet 'Microsoft.Network/virtualNetworks@2024-07-01' = {
   name: 'sharedVNet'
   location: location
   properties: {
@@ -20,7 +20,7 @@ resource vnet 'Microsoft.Network/virtualNetworks@2023-05-01' = {
   }
 }
 
-resource nsg 'Microsoft.Network/networkSecurityGroups@2023-05-01' = {
+resource nsg 'Microsoft.Network/networkSecurityGroups@2024-07-01' = {
   name: 'sharedNSG'
   location: location
   properties: {
@@ -57,7 +57,7 @@ module keyvault './modules/keyvault.bicep' = {
     location: location
   }
 }
-resource publicIpLb 'Microsoft.Network/publicIPAddresses@2023-05-01' = {
+resource publicIpLb 'Microsoft.Network/publicIPAddresses@2024-07-01' = {
   name: 'lb-public-ip'
   location: location
   sku: { name: 'Basic' }
@@ -77,8 +77,8 @@ module vm1 './modules/vm.bicep' = {
   name: 'vm1'
   params: {
     vmName: 'vm1'
-    adminUsername: 'ljg'
-    adminPassword: 'Minoandruby42!!!'
+    adminUsername: '<username>'
+    adminPassword: '<password>'
     location: location
     subnetId: vnet.properties.subnets[0].id
     nsgId: nsg.id
