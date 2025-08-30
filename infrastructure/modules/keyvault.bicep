@@ -1,6 +1,6 @@
 param name string
 param location string
-resource kv 'Microsoft.KeyVault/vaults@2023-02-01' = {
+resource kv 'Microsoft.KeyVault/vaults@2024-11-01' = {
   name: name
   location: location
   properties: {

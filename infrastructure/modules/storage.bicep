@@ -1,6 +1,6 @@
 param name string
 param location string
-resource stg 'Microsoft.Storage/storageAccounts@2023-01-01' = {
+resource stg 'Microsoft.Storage/storageAccounts@2025-01-01' = {
   name: name
   location: location
   sku: {

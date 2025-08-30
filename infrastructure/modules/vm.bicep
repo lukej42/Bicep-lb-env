@@ -17,7 +17,7 @@ param nsgId string
 param backendPoolId string = ''
 
 
-resource nic 'Microsoft.Network/networkInterfaces@2023-05-01' = {
+resource nic 'Microsoft.Network/networkInterfaces@2024-07-01' = {
   name: '${vmName}-nic'
   location: location
   properties: {
@@ -48,7 +48,7 @@ resource nic 'Microsoft.Network/networkInterfaces@2023-05-01' = {
 }
 
 // Virtual Machine
-resource vm 'Microsoft.Compute/virtualMachines@2023-09-01' = {
+resource vm 'Microsoft.Compute/virtualMachines@2024-11-01' = {
   name: vmName
   location: location
   properties: {

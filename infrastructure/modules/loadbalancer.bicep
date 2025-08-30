@@ -2,7 +2,7 @@ param location string = resourceGroup().location
 param lbName string
 param publicIpId string
 
-resource lb 'Microsoft.Network/loadBalancers@2023-05-01' = {
+resource lb 'Microsoft.Network/loadBalancers@2024-07-01' = {
   name: lbName
   location: location
   sku: {
