@@ -39,3 +39,4 @@ az deployment group create \
   --template-file main.bicep \
   --parameters @parameters/parameters.dev.json# Bicep-lb-env
 # Bicep-lb-env
+# Bicep-lb-env
