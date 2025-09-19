@@ -89,8 +89,8 @@ module vm2 './modules/vm.bicep' = {
   name: 'vm2'
   params: {
     vmName: 'vm2'
-    adminUsername: 'ljg'
-    adminPassword: 'Minoandruby42!!!'
+    adminUsername: '<username>'
+    adminPassword: '<password>'
     location: location
     subnetId: vnet.properties.subnets[0].id
     nsgId: nsg.id
