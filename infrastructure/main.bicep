@@ -77,8 +77,8 @@ module vm1 './modules/vm.bicep' = {
   name: 'vm1'
   params: {
     vmName: 'vm1'
-    adminUsername: '<username>'
-    adminPassword: '<password>'
+    adminUsername: 'admin'
+    adminPassword: 'Password123?!?'
     location: location
     subnetId: vnet.properties.subnets[0].id
     nsgId: nsg.id
@@ -89,8 +89,8 @@ module vm2 './modules/vm.bicep' = {
   name: 'vm2'
   params: {
     vmName: 'vm2'
-    adminUsername: '<username>'
-    adminPassword: '<password>'
+    adminUsername: 'admin'
+    adminPassword: 'Password123?!?'
     location: location
     subnetId: vnet.properties.subnets[0].id
     nsgId: nsg.id
